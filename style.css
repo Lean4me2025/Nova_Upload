@@ -1,20 +1,10 @@
 
-body {
-  background-color: #111;
-  color: white;
-  font-family: Arial, sans-serif;
-  padding: 2rem;
-  text-align: center;
-}
-form {
-  margin-top: 1rem;
-}
-label {
-  display: block;
-  margin: 0.5rem;
-}
-button {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
+function showMatches() {
+    const checkedTraits = [...document.querySelectorAll('input[name="trait"]:checked')].map(el => el.value);
+    const results = document.getElementById('results');
+    if (checkedTraits.length === 0) {
+        results.innerHTML = "<p>Please select at least one trait to see matches.</p>";
+    } else {
+        results.innerHTML = "<p>Your selected traits: <strong>" + checkedTraits.join(', ') + "</strong></p>";
+    }
 }
