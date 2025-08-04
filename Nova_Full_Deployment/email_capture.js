@@ -1,0 +1,1 @@
+function captureEmail(email) { console.log('Captured:', email); }
