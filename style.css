@@ -1,0 +1,20 @@
+
+body {
+  background-color: #111;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+  text-align: center;
+}
+form {
+  margin-top: 1rem;
+}
+label {
+  display: block;
+  margin: 0.5rem;
+}
+button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
