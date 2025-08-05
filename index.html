@@ -1,1 +1,9 @@
-<!DOCTYPE html><html><head><title>MeetMyNova</title></head><body><h1>Welcome to MeetMyNova</h1></body></html>
+
+function saveEmail() {
+  const emailInput = document.getElementById("email");
+  const email = emailInput.value;
+  if (email) {
+    localStorage.setItem("nova_user_email", email);
+    alert("Email saved for updates!");
+  }
+}
