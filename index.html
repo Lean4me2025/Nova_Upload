@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MeetMyNova</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MeetMyNova</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Welcome to MeetMyNova</h1>
+  <h1>Welcome to MeetMyNova</h1>
 
-  <!-- Voice Intro -->
-  <audio id="voiceIntro" autoplay>
-    <source src="voice_intro.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
+  <!-- Voice Intro -->
+  <audio id="voiceIntro" autoplay>
+    <source src="voice_intro.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
 
-  <!-- Traits Display -->
-  <div id="trait-container"></div>
+  <!-- Traits Display -->
+  <div id="trait-container"></div>
 
-  <!-- Email Capture -->
-  <form onsubmit="saveEmail(); return false;">
-    <input type="email" id="email" placeholder="Enter your email" required />
-    <button type="submit">Save Email</button>
-  </form>
+  <!-- Email Capture -->
+  <form onsubmit="saveEmail(); return false;">
+    <input type="email" id="email" placeholder="Enter your email" required />
+    <button type="submit">Save Email</button>
+  </form>
 
-  <!-- PDF Generation -->
-  <button onclick="generatePDF()">Generate PDF</button>
+  <!-- PDF Generation -->
+  <button onclick="generatePDF()">Generate PDF</button>
 
-  <!-- Payhip Link -->
-  <p><a href="payhip_integration.html">Buy the Purpose Book</a></p>
+  <!-- Payhip Link (FIX THIS LINK BELOW) -->
+  <p>
+    <a href="https://payhip.com/YOUR_PRODUCT_LINK_HERE" target="_blank">Buy the Purpose Book</a>
+  </p>
 
-  <!-- Scripts -->
-  <script src="traits.js"></script>
-  <script src="script.js"></script>
-  <script src="generate_pdf.js"></script>
-  <script src="email_capture.js"></script>
+  <!-- Scripts -->
+  <script src="traits.js"></script>
+  <script src="script.js"></script>
+  <script src="generate_pdf.js"></script>
+  <script src="email_capture.js"></script>
 </body>
 </html>
