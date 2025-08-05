@@ -1,0 +1,1 @@
+This is email_capture.js
