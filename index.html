@@ -1,9 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MeetMyNova</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Welcome to MeetMyNova</h1>
 
-function saveEmail() {
-  const emailInput = document.getElementById("email");
-  const email = emailInput.value;
-  if (email) {
-    localStorage.setItem("nova_user_email", email);
-    alert("Email saved for updates!");
-  }
-}
+  <!-- Voice Intro -->
+  <audio id="voiceIntro" autoplay>
+    <source src="voice_intro.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Traits Display -->
+  <div id="trait-container"></div>
+
+  <!-- Email Capture -->
+  <form onsubmit="saveEmail(); return false;">
+    <input type="email" id="email" placeholder="Enter your email" required />
+    <button type="submit">Save Email</button>
+  </form>
+
+  <!-- PDF Generation -->
+  <button onclick="generatePDF()">Generate PDF</button>
+
+  <!-- Payhip Link -->
+  <p><a href="payhip_integration.html">Buy the Purpose Book</a></p>
+
+  <!-- Scripts -->
+  <script src="traits.js"></script>
+  <script src="script.js"></script>
+  <script src="generate_pdf.js"></script>
+  <script src="email_capture.js"></script>
+</body>
+</html>
